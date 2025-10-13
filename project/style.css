@@ -1,0 +1,238 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-color: #1c3853;
+}
+
+/* Landing Page Container */
+.landing-container {
+  position: relative;
+  height: 100vh;
+  background: url('background.jpg') center/cover no-repeat; /* replace with your actual image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
+}
+
+.content {
+  max-width: 400px;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.get-started {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f8b84e;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.get-started:hover {
+  background-color: #e6a93f;
+}
+
+/* About Text */
+.about {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.about p {
+  margin-bottom: 12px;
+  color: #ddd;
+}
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #0b2545;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.details-btn {
+  background-color: #f8b84e;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.details-btn:hover {
+  background-color: #e6a93f;
+}
+
+/* ===== ROOM SELECTION ===== */
+.room-selection {
+  padding: 40px;
+  text-align: center;
+}
+
+.rooms-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.room-card {
+  background-color: #fff;
+  color: #000;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 15px;
+  text-align: center;
+}
+
+.room-card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.room-card h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.controls button {
+  background-color: #0b2545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls input {
+  width: 40px;
+  text-align: center;
+  margin: 0 8px;
+  border: none;
+  font-size: 1rem;
+  background: #f4f4f4;
+  border-radius: 4px;
+}
+
+.total {
+  margin-top: 40px;
+  background-color: #0b2545;
+  color: white;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* ===== MEALS ===== */
+.meals-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.meal-item {
+  background-color: #fff;
+  color: #000;
+  width: 300px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-item input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}

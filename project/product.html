@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Expense Planner | BudgetEase Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <h1>Conference Expense Planner</h1>
+    <nav>
+      <a href="#venue">Venue</a>
+      <a href="#addons">Add-ons</a>
+      <a href="#meals">Meals</a>
+    </nav>
+    <button id="showDetailsBtn" class="details-btn">Show Details</button>
+  </header>
+
+  <!-- ===== VENUE SECTION ===== -->
+  <section id="venue" class="room-selection">
+    <h2>Venue Room Selection</h2>
+    <div class="rooms-container">
+      <div class="room-card" data-price="3500">
+        <img src="images/conference.jpg" alt="Conference Room">
+        <h3>Conference Room</h3><p>(Capacity:15)</p><p class="price">₱3500</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="5500">
+        <img src="images/auditorium.jpg" alt="Auditorium Hall">
+        <h3>Auditorium Hall</h3><p>(Capacity:200)</p><p class="price">₱5500</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="700">
+        <img src="images/presentation.jpg" alt="Presentation Room">
+        <h3>Presentation Room</h3><p>(Capacity:50)</p><p class="price">₱700</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="900">
+        <img src="images/largemeeting.jpg" alt="Large Meeting Room">
+        <h3>Large Meeting Room</h3><p>(Capacity:10)</p><p class="price">₱900</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="1100">
+        <img src="images/smallmeeting.jpg" alt="Small Meeting Room">
+        <h3>Small Meeting Room</h3><p>(Capacity:5)</p><p class="price">₱1100</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADD-ONS SECTION ===== -->
+  <section id="addons" class="room-selection">
+    <h2>Add-ons Selection</h2>
+    <div class="rooms-container">
+      <div class="room-card" data-price="200">
+        <img src="images/projector.jpg" alt="Projectors">
+        <h3>Projectors</h3><p>₱200</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="35">
+        <img src="images/speaker.jpg" alt="Speakers">
+        <h3>Speakers</h3><p>₱35</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="45">
+        <img src="images/microphone.jpg" alt="Microphones">
+        <h3>Microphones</h3><p>₱45</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="80">
+        <img src="images/whiteboard.jpg" alt="Whiteboards">
+        <h3>Whiteboards</h3><p>₱80</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+
+      <div class="room-card" data-price="80">
+        <img src="images/signage.jpg" alt="Signage">
+        <h3>Signage</h3><p>₱80</p>
+        <div class="controls"><button class="decrement">-</button><input type="text" value="0" readonly><button class="increment">+</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEALS SECTION ===== -->
+  <section id="meals" class="room-selection">
+    <h2>Meals Selection</h2>
+    <div class="meals-container">
+      <div class="meal-item" data-price="50">
+        <label>Breakfast (₱50/person):</label>
+        <input type="number" min="0" value="0">
+      </div>
+      <div class="meal-item" data-price="60">
+        <label>Lunch (₱60/person):</label>
+        <input type="number" min="0" value="0">
+      </div>
+      <div class="meal-item" data-price="25">
+        <label>High Tea (₱25/person):</label>
+        <input type="number" min="0" value="0">
+      </div>
+      <div class="meal-item" data-price="70">
+        <label>Dinner (₱70/person):</label>
+        <input type="number" min="0" value="0">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOTAL SECTION ===== -->
+  <div class="total">
+    <h3>Total Cost: ₱<span id="totalCost">0</span></h3>
+  </div>
+
+  <!-- ===== MODAL ===== -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Booking Details</h2>
+      <div id="detailsList"></div>
+      <h3>Total: ₱<span id="modalTotal">0</span></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
